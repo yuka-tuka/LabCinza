@@ -1,0 +1,68 @@
+{
+    "language": {               
+               "help": "{emoji} **|** Altera a localidade/idioma das mensagens do Kochou no servidor.",
+               "invalid": "{emoji[0]} **|** Olá ``{author}``, Você precisa especificar o idioma que deseje que eu use, \n{emoji[1]} **|** Disponível : {available}",
+               "success": "{emoji} **|** Olá ``{author}``, você alterou meu idioma idioma nesse servidor para ``{locale}``."
+               },
+    "help": {
+        "cmdUsage": "[Comando]",
+        "cmdDescription": "Lista detalhadamente todos os comandos do Bot.",
+        "notFound": "{emoji} **|** Olá ``{author}``, o comando ``{cmd}`` não existe.",
+        "commandName": "Comando {command}",
+        "description": "{emoji} Descrição",
+        "usage": "{emoji} Uso",
+        "bot":"{emoji} Permissões (Bot)",
+        "user":"{emoji} Permissões (Usuário)",
+        "name":"{emoji} Nome principal",
+        "cooldown":"{emoji} Tempo de espera",
+        "aliases": "{emoji} Outros Nomes",
+        "notSupplied": "Não fornecida.",
+        "notDefined": "Não definidos.",
+        "footer":"{bot} © {date}",
+        "links": "[**Servidor de Suporte**]({support}) | [**Adicionar**]({invite}) | [**Doar**]({donate}) | [**Votar**]({vote}) | [**GitHub**]({github})\n\n**[Prefixos]:** {prefixes}\n\u200b",
+        "categoryCommands": "{emoji} **Comandos de {category}**: ({total})",
+        "tip": "Digite **{command} <Comando>** para ver mais informações sobre um comando."
+    },
+
+
+    "disablechannel": {
+        "cmdUsage": "<#Menção|Nome|ID>",
+        "cmdCooldown":"5 segundos",
+        "cmdDescription": "Desativa ou ativa um canal em que o Bot possa ser usado.",
+        "cmdBot":"none",
+        "cmdUser":"manage_guild, manage_channels",
+        "enable":"{emoji} **|** Olá ``{author}``, o canal {channel} foi removido na lista.", 
+        "disable":"{emoji} **|** Olá ``{author}``, o canal {channel} foi adicionado na lista."
+    },
+
+
+    "drole": {
+        "help": "{emoji} **|** Permite ou proíbe membros com um cargo específico de usarem o Bot.",
+        "enable": "{emoji} **|** Olá ``{author}``, o cargo {role} foi removido na lista.",
+        "disable":"{emoji} **|** Olá ``{author}``, o cargo {role} foi adicionado na lista.",
+        "higherRole":"{emoji} **|** Olá ``{author}``, você não pode desativar um cargo que seja igual ou maior que o seu cargo mais alto."
+
+    },
+    "dcmd": {
+        "help": "{emoji} **|** Permite ou proíbe que um comando específico seja usado nesse servidor.",
+        "enable": "{emoji} **|** Olá ``{author}``, o comando {cmd} foi removido na lista.",
+        "disable":"{emoji} **|** Olá ``{author}``, o comando {cmd} foi adicionado na lista.",
+        "cantDisable":"{emoji} **|** Olá ``{author}``, você não pode desativar esse comando.",
+        "error":"{emoji} **|** Olá ``{author}``, o comando {cmd} não existe."
+
+    },
+    "prefix": {
+        "cmdUsage": "<Prefixo>",
+        "cmdDescription": "Altera o prefixo da Disco no servidor.",
+        "invalid": "{emoji} **{author}**, você precisa fornecer um prefixo com até 6 caracteres!",
+        "reset": "{emoji} **{author}**, você resetou meu prefixo customizado nesse servidor!",
+        "success": "{emoji} **{author}**, agora eu apenas responderei a comandos invocados com o prefixo **`{prefix}`**."
+    },
+    "eval": {
+        "cmdUsage": "<Prefixo>",
+        "cmdDescription": "Altera o prefixo da Disco no servidor.",
+        "invalid": "{emoji} **{author}**, você precisa fornecer um prefixo com até 6 caracteres!",
+        "reset": "{emoji} **{author}**, você resetou meu prefixo customizado nesse servidor!",
+        "success": "{emoji} **{author}**, agora eu apenas responderei a comandos invocados com o prefixo **`{prefix}`**."
+    } 
+}    

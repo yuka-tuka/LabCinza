@@ -1,0 +1,16 @@
+{
+
+  "oauth2":{"link":"https://discordapp.com/api/oauth2/authorize?",
+            "endpoint":"https://discordapp.com/api",
+            "secret":"K87efobPy6_0_E7nR1_R_YcutcdgUD8p",
+            "login":{"client_id":"628522271899910144", 
+                     "redirect_uri":"http://192.168.100.130:8000/callback", 
+                     "response_type":"code", 
+                     "scope":"identify guilds guilds.join"
+                    }
+
+
+
+
+            }
+}
