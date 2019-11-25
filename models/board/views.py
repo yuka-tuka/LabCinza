@@ -15,49 +15,43 @@ class board(object):
     #model da página inicial
     @labcinza.route("/")
     async def index():
-        return "Páginas [Login, Callback, Perfil, Guild, Logout]"
-    
+       user = await api.user_info(session.get("token", None))
+       if user is False:return redirect("/logout")
+       return await quart.render_template("index.html", user=user)
+
     #model da página callback (autenticar)
     @labcinza.route('callback')
     async def callback():
-        code = quart.request.args.get('code')
-        try:
-            res = await api.callback(code)
-        except requests.exceptions.HTTPError:
-            return "Invalid Code, try again."
-        session["token"] = res["access_token"]
-        return redirect('/')
+       try:
+           res = await api.callback(quart.request.args.get('code'))
+           session["token"] = res["access_token"]
+           return redirect("/")
+       except KeyError:
+           return redirect("/")
 
     #model da página login (gerar o link)
     @labcinza.route('login')
     async def login():
       if session.get("token") is None:
-         return redirect(config['oauth2']['link']+urllib.parse.urlencode(config['oauth2']['login']))
+         return redirect(env['oauth2']['link']+urllib.parse.urlencode(env['oauth2']['login']))
       else:
-        return redirect('/')
-    
+        return redirect('/')    
+
     #model da página perfil (perfil do usuário)
     @labcinza.route('perfil')
     async def profile():
-      if session.get("token") is None:
-         return redirect("/")
-      try:
-        user = await api.user_info(session.get("token"))
-      except requests.exceptions.HTTPError:
-         return "Token não é válido, ou expirou!"
-      return jsonify(user)
+       user = await api.user_info(session.get("token", None))
+       if user is False or user is None:return redirect("/logout")
+       return jsonify(user)
 
     #model da página guilds (listagem das guilds do usuário)
     @labcinza.route('guild')
     async def guild():
-      if session.get("token") is None:
-         return redirect("/")
-      try:
-        guild = await api.user_guild(session.get("token"))
-      except requests.exceptions.HTTPError:
-         return "Token não é válido, ou expirou!"
-      return jsonify(guild)
+       guild = await api.user_info(session.get("token", None))
+       if guild is False or guild is None:return redirect("/logout")
+       return jsonify(user_guild)
     
+
     #model da página logout (apagar o token da session)
     @labcinza.route('logout')
     async def logout():

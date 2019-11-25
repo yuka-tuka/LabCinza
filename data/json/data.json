@@ -1,5 +1,7 @@
 {
-
+  "website":{"database":"mongodb+srv://admin:D157359@labcinza-x64xr.mongodb.net/labcinza?retryWrites=true&w=majority",
+             "index":"http://192.168.100.130:8000"
+             },
   "oauth2":{"link":"https://discordapp.com/api/oauth2/authorize?",
             "endpoint":"https://discordapp.com/api",
             "secret":"K87efobPy6_0_E7nR1_R_YcutcdgUD8p",

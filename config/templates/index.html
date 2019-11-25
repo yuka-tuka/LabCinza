@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+          {% block og %}
+          <meta property="og:title" content="LabCinza">
+          <meta property="og:description" content="Um pequeno texto aqui">
+          <meta property="og:type" content="website">
+          <meta property="og:url" content="https://www.labcinza.me">
+          {% endblock %}
+          {% block img %}
+          <meta property="og:image" content="{{ url_for('static', filename='img/logo.jpg')}}">
+          <link rel="icon" href="{{ url_for('static', filename='img/logo.jpg')}}">
+          <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo.jpg')}}">
+          {% endblock %}
+          {% block head %}{{super()}}{% endblock %}
+          {% block title %}LabCinza - Index{% endblock %}
+          {% block content %}
+            <!-- 123 -->
+          {% endblock %}
+          {% block js %}{{super()}}{% endblock %}
